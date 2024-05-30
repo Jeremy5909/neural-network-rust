@@ -22,4 +22,7 @@ fn main() {
     network.train(inputs, targets, 10000);
 
     println!("0 XOR 0: {}", network.feed_forward(Matrix::from(vec![0.0, 0.0])));
+    println!("0 XOR 1: {}", network.feed_forward(Matrix::from(vec![0.0, 1.0])));
+    println!("1 XOR 0: {}", network.feed_forward(Matrix::from(vec![1.0, 0.0])));
+    println!("1 XOR 1: {}", network.feed_forward(Matrix::from(vec![1.0, 1.0])));
 }
